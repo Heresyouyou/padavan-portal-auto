@@ -1,0 +1,22 @@
+# 凭据 —— 绝不提交
+credentials.env
+*.credentials
+*secret*
+*token*
+
+# 填好真实值的认证脚本（模板 *.template 可以提交）
+portal-auth.sh
+kmust_auth.sh
+
+# 备份 / 固件
+*.trx
+*.bin
+*.ipk
+backup/
+firmware/
+
+# 系统
+.DS_Store
+Thumbs.db
+*.swp
+*~
