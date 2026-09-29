@@ -1,5 +1,8 @@
 # 05 · MTU / MSS 与 DNS 优化
 
+> 📎 本文属**进阶附录**，与锐捷 Portal 认证插件无直接关联，按需查阅。
+> 返回 [README](../../README.md) ｜ [Portal 自动认证](../portal-auth.md)
+
 > 原理通用；命令为 Padavan 特有。
 
 ## 一、MTU 黑洞与 MSS 钳制
@@ -48,7 +51,7 @@ iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss
 
 放到 `/etc/storage/post_wan_script.sh`（WAN 拿到 IP 后执行）：
 
-见 [../scripts/post_wan_script.sh](../scripts/post_wan_script.sh)
+见 [../../scripts/post_wan_script.sh](../../scripts/post_wan_script.sh)
 
 ```sh
 scp scripts/post_wan_script.sh admin@192.168.123.1:/etc/storage/
@@ -114,7 +117,7 @@ conf-dir=/etc/storage/dnsmasq/dnsmasq.d
 
 ### 3. 有效参数
 
-见 [../scripts/dnsmasq-optimize.conf](../scripts/dnsmasq-optimize.conf)
+见 [../../scripts/dnsmasq-optimize.conf](../../scripts/dnsmasq-optimize.conf)
 
 ```
 min-cache-ttl=1800     # 实测 TTL 由 53/298 → ~1789，大幅减少上游查询

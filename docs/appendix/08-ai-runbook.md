@@ -1,5 +1,8 @@
 # 08 · ★ 交给 AI 复现的分步 Runbook
 
+> 📎 本文属**进阶附录**，与锐捷 Portal 认证插件无直接关联，按需查阅。
+> 返回 [README](../../README.md) ｜ [Portal 自动认证](../portal-auth.md)
+
 > **用法**：把本文件整份交给另一个 AI（连同仓库其余文档作为按需参考），
 > 让它按 **Phase 顺序**执行。每步都有**期望输出**与**失败处理**，
 > 遇到 **STOP 条件必须停下来问人**，不要自行猜测继续。
@@ -245,7 +248,7 @@ ssh -i $SSH_KEY admin@$ROUTER_IP "
 ssh -i $SSH_KEY admin@$ROUTER_IP "ping -D -s 1464 <上游IP>" < /dev/null
 ```
 
-部署（脚本见 [../scripts/post_wan_script.sh](../scripts/post_wan_script.sh)）：
+部署（脚本见 [../../scripts/post_wan_script.sh](../../scripts/post_wan_script.sh)）：
 
 ```sh
 scp -i $SSH_KEY scripts/post_wan_script.sh admin@$ROUTER_IP:/etc/storage/

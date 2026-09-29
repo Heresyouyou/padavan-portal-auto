@@ -1,5 +1,8 @@
 # 02 · 初始配置
 
+> 📎 本文属**进阶附录**，与锐捷 Portal 认证插件无直接关联，按需查阅。
+> 返回 [README](../../README.md) ｜ [Portal 自动认证](../portal-auth.md)
+
 ## ★ 顺序原则：先配 WiFi，再插 WAN
 
 **配置 WiFi 和管理路由器时，WAN 口不要插网线。**
@@ -53,7 +56,7 @@ WAN 口 → 校园网墙插
 
 验证：管理界面 → 状态 → WAN 口信息，应显示分配的 IP + DNS。
 
-此时若还不能上网，说明需要**校园网认证**，见 [03-campus-portal-auth.md](03-campus-portal-auth.md)。
+此时若还不能上网，说明需要**校园网认证**，见 [Portal 认证](../portal-auth.md)。
 
 ## 3. 开启 SSH（后续所有运维的前提）
 

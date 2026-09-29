@@ -4,11 +4,12 @@ credentials.env
 *secret*
 *token*
 
-# 填好真实值的认证脚本（模板 *.template 可以提交）
-portal-auth.sh
-kmust_auth.sh
+# 填好真实值的认证配置（示例模板 *.example 可以提交）
+portal-auth.conf
+*.local.conf
+!templates/*.example
 
-# 备份 / 固件
+# 固件 / 备份
 *.trx
 *.bin
 *.ipk

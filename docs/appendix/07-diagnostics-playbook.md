@@ -1,5 +1,8 @@
 # 07 · 排障手册与判据铁律
 
+> 📎 本文属**进阶附录**，与锐捷 Portal 认证插件无直接关联，按需查阅。
+> 返回 [README](../../README.md) ｜ [Portal 自动认证](../portal-auth.md)
+
 ## 一、★ 判据铁律：不要用 ping 判断链路健康
 
 ### 坑 1：ICMP 限速造成「假丢包」
@@ -86,7 +89,7 @@ Padavan 默认 `icmp_ratelimit=1000` —— 对同一目标**每 1000ms 只回 1
 | 大面积 ping 丢包但业务正常 | ICMP 限速假象 | 判据铁律（本章一） |
 | 空闲设备 ping 几百 ms | 终端省电休眠 | 正常，非故障 |
 | 某台设备独卡 | 该终端 RSSI / `psm` | → [04](04-wireless-tuning.md) |
-| 每隔几分钟全体掉线 | Portal 守护是否在跑 | → [03](03-campus-portal-auth.md) |
+| 每隔几分钟全体掉线 | Portal 守护是否在跑 | → [Portal 认证](../portal-auth.md) |
 | 远程桌面时断开 | Portal 防共享检测 | 用 P2P 工具（见下） |
 
 ---

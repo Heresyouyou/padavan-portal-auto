@@ -1,5 +1,8 @@
 # 01 · 硬件、固件与刷机
 
+> 📎 本文属**进阶附录**，与锐捷 Portal 认证插件无直接关联，按需查阅。
+> 返回 [README](../../README.md) ｜ [Portal 自动认证](../portal-auth.md)
+
 > 平台特有章节。若你的路由器已刷好 Padavan，可跳到 [02-initial-config.md](02-initial-config.md)。
 
 ## 1. 硬件与固件选型

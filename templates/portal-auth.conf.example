@@ -1,0 +1,43 @@
+# ============================================================
+#  portal-auth.conf —— 认证凭据与参数（示例）
+#
+#  用法:
+#    scp templates/portal-auth.conf.example admin@192.168.123.1:/etc/storage/portal-auth.conf
+#    然后在路由器上填真实值（或用 vi 改好再传）:
+#      ssh admin@192.168.123.1 "chmod +x /etc/storage/portal-auth.sh; /sbin/mtd_storage.sh save" < /dev/null
+#
+#  本地留档请另存为 portal-auth.conf —— .gitignore 已忽略该文件名。
+#  ⚠️ 绝不要把填好的凭据提交到任何公开仓库！
+# ============================================================
+
+# ── 必填：校园网账号密码 ──────────────────────────────────
+USER="<你的学号>"
+PASS="<你的密码>"
+
+
+# ── 昆明理工大学用户：到此为止 ────────────────────────────
+#     PROFILE 默认就是 kmust，端点与 serviceId 已内置，无需再填任何东西。
+
+
+# ── 其他学校用户：下面二选一 ──────────────────────────────
+
+# 【方式 A ★ 最省事】把浏览器地址栏那条「认证登录页完整链接」原样粘进来。
+#   获取方法：未认证状态下打开任意 http 网站 → 浏览器被跳到认证登录页 → 复制地址栏全部内容。
+#   注意必须包含 ? 之后的参数部分，只有 loginForWeb 是不够的。
+#
+# PORTAL_LOGIN_URL="http://10.10.10.10:8080/zportal/loginForWeb?wlanuserip=10.20.30.40&wlanacname=XXX&ssid=XXX&nasip=10.10.10.10&mac=aa:bb:cc:dd:ee:ff&t=1699999999"
+
+# 【方式 B】手工逐项提供：
+#
+# PROFILE="other"
+# AUTH_HOST="http://<PORTAL_HOST>:<PORT>"
+# LOGIN_PATH="/zportal/loginForWeb"
+# SUBMIT_PATH="/zportal/login/do"
+# SERVICE_ID="<计费服务ID>"          # 登录页 form 隐藏字段里，或用浏览器 F12 抓提交请求
+# INTERCEPT_KEY="zportal"            # 被拦截时响应体里的特征串
+# SUCCESS_KEY='"result":"success"'   # 认证成功时响应体里的特征串
+
+
+# ── 可选微调 ──────────────────────────────────────────────
+# PROBE_URL="http://www.baidu.com/favicon.ico"   # 用于探测外网是否已可达
+# GUARD_INTERVAL=60                              # 守护模式轮询间隔（秒）
