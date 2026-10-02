@@ -199,6 +199,7 @@ grep Portal /tmp/syslog.log | tail -20    # 从 syslog 看
 | [docs/portal-auth.md](docs/portal-auth.md) | ★ 原理、参数表、手动适配、排障详解 |
 | [scripts/verify.sh](scripts/verify.sh) | 一键验收脚本（连通性/DNS/无线/负载） |
 | [docs/appendix/](docs/appendix/) | 附录：路由器刷机、调优与排障（非必需，进阶看） |
+| [snapshots/2026-10-02-good/](snapshots/2026-10-02-good/) | ★ **已验证配置快照**：一键恢复到可用状态（含 5G 信道 149 定案） |
 
 ---
 

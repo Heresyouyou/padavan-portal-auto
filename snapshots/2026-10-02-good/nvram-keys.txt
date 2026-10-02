@@ -1,0 +1,25 @@
+# 2026-10-02 verified snapshot —— 关键 nvram 键值（已脱敏，不含任何密码/MAC）
+# 用法：restore.sh 会逐行 nvram set 后 commit
+# --- 5GHz (ra0, wl_ 前缀) ---
+wl_channel=149
+wl_HT_BW=1
+wl_TxPower=40
+wl_KickStaRssiLow=-72
+wl_dtim=1
+wl_ssid=你是我的小星星吗_5G
+# --- 2.4GHz (rax0, rt_ 前缀) ---
+rt_channel=11
+rt_HT_BW=0
+rt_TxPower=100
+rt_KickStaRssiLow=0
+rt_dtim=1
+rt_ssid=你是我的小星星吗_5G
+# --- 硬件卸载：必须全关（否则腾讯系游戏 UDP 抖动 >5000ms）---
+hw_nat_mode=0
+sfe_enable=0
+udp_offload=
+wifi_offload=
+# --- DNS：仅校园网（学校规定）---
+wan_dnsenable_x=0
+wan_dns1_x=222.197.198.33
+wan_dns2_x=222.172.200.68
